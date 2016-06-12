@@ -1,5 +1,3 @@
-require_relative 'dice'
-
 class Attack
 
 	@@current_roll = []
@@ -82,7 +80,3 @@ class Attack
 	end
 
 end
-
-p run = Attack.new(100, 100)
-p run.attack
-p run.display_all_rolls
