@@ -48,14 +48,14 @@ class Attack
 		end
 
 		if  attackers_last_roll[1] != nil && @@current_roll.sort.reverse[1] != nil 
-			if attackers_last_roll[0] >= @@current_roll.sort.reverse[0] &&  attackers_last_roll[1] >= @@current_roll.sort.reverse[1]
+			if attackers_last_roll[0] > @@current_roll.sort.reverse[0] &&  attackers_last_roll[1] >= @@current_roll.sort.reverse[1]
 				@defenders -= 2
-			elsif attackers_last_roll[0] <= @@current_roll.sort.reverse[0] &&  attackers_last_roll[1] <= @@current_roll.sort.reverse[1]
+			elsif attackers_last_roll[0] < @@current_roll.sort.reverse[0] &&  attackers_last_roll[1] <= @@current_roll.sort.reverse[1]
 				@attackers -= 2
-			elsif attackers_last_roll[0] > @@current_roll.sort.reverse[0] &&  attackers_last_roll[1] <= @@current_roll.sort.reverse[1]
+			elsif attackers_last_roll[0] >= @@current_roll.sort.reverse[0] &&  attackers_last_roll[1] <= @@current_roll.sort.reverse[1]
 				@attackers -= 1
 				@defenders -= 1
-			elsif attackers_last_roll[0] < @@current_roll.sort.reverse[0] &&  attackers_last_roll[1] >= @@current_roll.sort.reverse[1]
+			elsif attackers_last_roll[0] <= @@current_roll.sort.reverse[0] &&  attackers_last_roll[1] >= @@current_roll.sort.reverse[1]
 				@attackers -= 1
 				@defenders -= 1
 
